@@ -40,12 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (!checkInternetConnection(this)) {
+//
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
+//            builder.setIcon(R.drawable.nointernet);
+//            builder.setTitle("No Internet");
+//            builder.setMessage("Please Check Your Internet Connection");
+//            builder.setView(R.layout.connection);
+//            builder.create().show();
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
-            builder.setIcon(R.drawable.sampreeti_logo);
-            builder.setTitle("No Internet");
-            builder.setMessage("Please Check Your Internet Connection");
-            builder.create().show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.webView,
+                    new NoConnection()).commit();
 
             //Toast.makeText(getApplicationContext(), "No Internet!", Toast.LENGTH_SHORT).show();
         } else {
