@@ -1,7 +1,9 @@
 package com.example.beatniktechnology.sampreeti;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.ConnectivityManager;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +13,7 @@ import android.view.WindowManager;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.WebViewFragment;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -65,6 +68,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+
+        if (wv != null && wv.canGoBack())
+            wv.goBack();
+
+        else {
+            if (wv != null)
+                wv.stopLoading();
+
+            super.onBackPressed();
+
+        }
+
+
+    }
+
+
     public static boolean checkInternetConnection(Context context) {
 
         ConnectivityManager con_manager = (ConnectivityManager)
@@ -75,12 +97,12 @@ public class MainActivity extends AppCompatActivity {
                 && con_manager.getActiveNetworkInfo().isConnected());
     }
 
-    // Function to load all URLs in same webview
+    // Function to load all URLs in same Webview
     private class CustomWebViewClient extends WebViewClient {
         public boolean shouldOverrideUrlLoading(final WebView view, final String url) {
             if (!checkInternetConnection(MainActivity.this)) {
 
-                Toast.makeText(getApplicationContext(), "No Internet!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "No Internet Connection!", Toast.LENGTH_SHORT).show();
 
             } else {
 
@@ -91,16 +113,5 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
 
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        if (wv.canGoBack()) {
-            wv.goBack();
-        } else {
-
-            super.onBackPressed();
-        }
     }
 }
