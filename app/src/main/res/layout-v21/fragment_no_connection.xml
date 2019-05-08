@@ -5,32 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#efe6e6"
+    android:background="#ffffff"
     tools:context=".NoConnection">
 
-    <ImageView
+    <pl.droidsonroids.gif.GifImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/nointernet"
-        android:layout_gravity="center"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        android:text="No Internet"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        android:layout_marginTop="2dp"
-        android:text="Turn On Wifi or Data Connection"
-        android:layout_gravity="center"
+        android:src="@drawable/offlineinternet"
         />
 
     <Button
@@ -42,9 +23,46 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold|italic"
         android:textColor="#ffffff"
-        android:elevation="20dp"
         android:background="@drawable/button_shape_try_again"
         />
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/nointernet"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="22sp"-->
+        <!--android:text="No Internet"-->
+        <!--android:textStyle="bold"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textStyle="bold|italic"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:text="Turn On Wifi or Data Connection"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/try_again"-->
+        <!--android:layout_width="110dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:text="Try Again"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:textStyle="bold|italic"-->
+        <!--android:textColor="#ffffff"-->
+        <!--android:elevation="20dp"-->
+        <!--android:background="@drawable/button_shape_try_again"-->
+        <!--/>-->
 
 
 

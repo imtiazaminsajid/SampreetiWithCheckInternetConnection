@@ -22,6 +22,9 @@ public class NoConnection extends Fragment {
     Button button;
 
 
+
+
+
     public NoConnection() {
         // Required empty public constructor
     }
@@ -48,6 +51,8 @@ public class NoConnection extends Fragment {
                 }
             }
         });
+
+
 
 
 
