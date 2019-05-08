@@ -42,6 +42,7 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold|italic"
         android:textColor="#ffffff"
+        android:elevation="20dp"
         android:background="@drawable/button_shape_try_again"
         />
 

@@ -39,7 +39,7 @@ public class NoConnection extends Fragment {
             public void onClick(View v) {
                 if (!checkInternetConnection(getActivity())) {
 
-                    Toast.makeText(getContext(), "No Internet!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "Check Internet Connection!", Toast.LENGTH_SHORT).show();
                 } else {
                     Intent intent = new Intent(getActivity(), MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
