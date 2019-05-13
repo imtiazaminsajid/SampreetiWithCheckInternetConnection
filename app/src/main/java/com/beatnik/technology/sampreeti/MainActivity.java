@@ -1,19 +1,13 @@
-package com.example.beatniktechnology.sampreeti;
+package com.beatnik.technology.sampreeti;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.net.ConnectivityManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.webkit.WebViewFragment;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {

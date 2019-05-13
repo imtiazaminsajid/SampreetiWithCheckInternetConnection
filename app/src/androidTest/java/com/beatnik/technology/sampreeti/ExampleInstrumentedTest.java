@@ -1,4 +1,4 @@
-package com.example.beatniktechnology.sampreeti;
+package com.beatnik.technology.sampreeti;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
